@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/syle.css">
+    <title>This Is My To Do List</title>
+</head>
+<body>
+    <section class="container">
+        <section>
+            <div class="head">
+                <h1>TO DO LIST</h1>
+                <h3 class="date"><%=myDate %></h3>
+            </div>   
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <input type="checkbox" name="boxList" class="boxList">
+                    <label for="" id="labelList">Start your day with a prayer</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="boxList" class="boxList">
+                    <label for="" id="labelList">Make your bed</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="boxList" class="boxList">
+                    <label for="" id="labelList">Cook your breakfast</label>
+                </li>
+                <% for(let i = 0; i<addedItem.length; i++){%>
+                    <li>
+                        <input type="checkbox" name="boxList" class="boxList">
+                        <label for="" id="labelList"><%=addedItem [i] %></label>
+                    </li>
+                <%}%>
+            </ul>
+            <form method="post">
+                <input type="text" name="addItem" placeholder="Add Activity to List...">
+                <button type="submit" name="button">Click Add</button>
+            </form>
+        </section>
+    </section>
+</body>
+</html>
